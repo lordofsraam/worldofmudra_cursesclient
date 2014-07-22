@@ -3,10 +3,13 @@
 
 NScreen::NScreen()
 {
-	screen = initscr();
+  printf("NScreen constructor called.\n");
+  screen = initscr();
+  printf("Screen initiallized.\n");
 }
 
 NScreen::~NScreen()
 {
-	endwin();
+  endwin();
+  printf("Screen ended.\n");
 }

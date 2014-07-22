@@ -21,5 +21,5 @@ class NWindow
 
 	void AddString(int x, int y, std::string str);
 
-        WINDOW *GetWindow();
+	WINDOW *GetWindow();
 };

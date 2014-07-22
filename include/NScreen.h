@@ -7,13 +7,13 @@ class NScreen
 
 public:
 
-	NScreen();
-	~NScreen();
+  NScreen();
+  ~NScreen();
 
 protected:
 
 private:
 
-	WINDOW* screen;
+  WINDOW* screen;
 
 };
