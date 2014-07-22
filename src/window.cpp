@@ -4,6 +4,11 @@
 #include <string>
 #include "window.h"
 
+NWindow::NWindow(WINDOW* existing_window)
+{
+  this->win = existing_window;
+}
+
 NWindow::NWindow(int width, int height, int x, int y)
 {
     this->win = newwin(height, width, y, x);
@@ -43,6 +48,11 @@ WINDOW *NWindow::GetWindow()
 void NWindow::AddString(int x, int y, std::string str)
 {
     mvwaddstr(this->win, y, x, str.c_str());
+}
+
+void NWindow::Print(std::string str)
+{
+  wprintw(this->win, str.c_str());
 }
 
 void NWindow::Border(char vertical, char horizontal)

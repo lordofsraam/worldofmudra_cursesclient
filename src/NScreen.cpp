@@ -1,15 +1,31 @@
 #include <ncurses.h>
 #include "NScreen.h"
 
-NScreen::NScreen()
+NScreen::NScreen() : NWindow(initscr())
 {
-  printf("NScreen constructor called.\n");
-  screen = initscr();
-  printf("Screen initiallized.\n");
 }
 
 NScreen::~NScreen()
 {
   endwin();
-  printf("Screen ended.\n");
+}
+
+void NScreen::Raw()
+{
+  raw();
+}
+
+void NScreen::KeyPad(bool b)
+{
+  keypad(this->win, b ? TRUE : FALSE);
+}
+
+void NScreen::Echo(bool b)
+{
+  if (b) echo(); else noecho();
+}
+
+void NScreen::Refresh()
+{
+  refresh();
 }
