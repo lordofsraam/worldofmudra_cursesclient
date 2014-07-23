@@ -38,6 +38,7 @@ void NWindow::SetXY(int x, int y)
 
 void NWindow::SetAttributes(int attrib)
 {
+  wattron(this->win, attrib);
 }
 
 WINDOW *NWindow::GetWindow()

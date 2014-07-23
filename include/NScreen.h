@@ -11,10 +11,15 @@ public:
   NScreen();
   ~NScreen();
   
-  void Raw();
+  void SetRaw();
+  
   void KeyPad(bool b);
-  void Echo(bool b);
+  
+  void SetEcho(bool b);
+  
   void Refresh();
+  
+  int GetKey();
 
 protected:
 

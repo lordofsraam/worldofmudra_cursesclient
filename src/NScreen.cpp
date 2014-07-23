@@ -10,7 +10,7 @@ NScreen::~NScreen()
   endwin();
 }
 
-void NScreen::Raw()
+void NScreen::SetRaw()
 {
   raw();
 }
@@ -20,7 +20,7 @@ void NScreen::KeyPad(bool b)
   keypad(this->win, b ? TRUE : FALSE);
 }
 
-void NScreen::Echo(bool b)
+void NScreen::SetEcho(bool b)
 {
   if (b) echo(); else noecho();
 }
@@ -28,4 +28,9 @@ void NScreen::Echo(bool b)
 void NScreen::Refresh()
 {
   refresh();
+}
+
+int NScreen::GetKey()
+{
+  return getchar();
 }
