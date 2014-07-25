@@ -11,7 +11,7 @@ NWindow::NWindow(WINDOW* existing_window)
 
 NWindow::NWindow(int width, int height, int x, int y)
 {
-    this->win = newwin(height, width, y, x);
+  this->win = newwin(height, width, y, x);
 }
 
 NWindow::~NWindow()
@@ -21,14 +21,14 @@ NWindow::~NWindow()
 
 void NWindow::Draw()
 {
-    wrefresh(this->win);
+  wrefresh(this->win);
 }
 
 std::pair<int, int> NWindow::GetXY()
 {
-    int x, y;
-    getmaxyx(this->win, y, x);
-    return std::make_pair(x, y);
+  int x, y;
+  getmaxyx(this->win, y, x);
+  return std::make_pair(x, y);
 }
 
 void NWindow::SetXY(int x, int y)
@@ -43,12 +43,12 @@ void NWindow::SetAttributes(int attrib)
 
 WINDOW *NWindow::GetWindow()
 {
-    return this->win;
+  return this->win;
 }
 
 void NWindow::AddString(int x, int y, std::string str)
 {
-    mvwaddstr(this->win, y, x, str.c_str());
+  mvwaddstr(this->win, y, x, str.c_str());
 }
 
 void NWindow::Print(std::string str)
@@ -58,5 +58,10 @@ void NWindow::Print(std::string str)
 
 void NWindow::Border(char vertical, char horizontal)
 {
-    box(this->win, vertical, horizontal);
+  box(this->win, vertical, horizontal);
+}
+
+void NWindow::MoveCursor(int x, int y)
+{
+  wmove(this->win, y, x);
 }

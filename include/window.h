@@ -22,6 +22,8 @@ public:
   void AddString(int x, int y, std::string str);
   
   void Print(std::string str);
+  
+  void MoveCursor(int x, int y);
 
   WINDOW *GetWindow();
   
