@@ -33,10 +33,10 @@ std::pair<int, int> NWindow::GetXY()
 
 void NWindow::SetXY(int x, int y)
 {
-    
+  
 }
 
-void NWindow::SetAttributes(int attrib)
+void NWindow::SetAttribute(int attrib)
 {
   wattron(this->win, attrib);
 }

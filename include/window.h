@@ -17,7 +17,7 @@ public:
   std::pair<int, int> GetXY();
   void SetXY(int x, int y);
 
-  void SetAttributes(int attrib);
+  void SetAttribute(int attrib);
 
   void AddString(int x, int y, std::string str);
   
