@@ -32,5 +32,5 @@ void NScreen::Refresh()
 
 int NScreen::GetKey()
 {
-  return getchar();
+  return getch();
 }

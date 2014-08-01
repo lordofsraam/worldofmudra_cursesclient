@@ -18,6 +18,8 @@ public:
   void SetXY(int x, int y);
 
   void SetAttribute(int attrib);
+  
+  void StartColor();
 
   void AddString(int x, int y, std::string str);
   

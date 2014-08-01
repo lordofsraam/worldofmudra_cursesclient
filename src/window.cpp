@@ -41,6 +41,11 @@ void NWindow::SetAttribute(int attrib)
   wattron(this->win, attrib);
 }
 
+void NWindow::StartColor()
+{
+  start_color();
+}
+
 WINDOW *NWindow::GetWindow()
 {
   return this->win;
